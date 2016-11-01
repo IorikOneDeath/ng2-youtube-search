@@ -1,7 +1,27 @@
 <h1>
-  {{title}}
+ {{title}}
 </h1>
 <div>
-  Search: <b>{{name}}</b>
-  <input [(ngModel)]="name">
+ Search: <b>{{name}}</b>
+ <input [(ngModel)]="name">
+ <!--<table id="dynamic" width="650" border="1" cellspacing="0" cellpadding="5">
+  <tr>
+   <th scope="col">Язык</th>
+   <th scope="col">Тэг</th>
+   <th scope="col">Ссылка</th>
+  </tr>
+  <tr>
+   <td>Java Script</td>
+   <td>Valor JavaS</td>
+   <td>(Ссылка)</td>
+  </tr>
+  <tr>
+   <td>HTML</td>
+   <td>Valor HTML</td>
+   <td>(Ссылка)</td>
+  </tr>
+ </table>-->
+ <div *ngFor="let result of results">
+  {{result.title}}
+ </div>
 </div>
