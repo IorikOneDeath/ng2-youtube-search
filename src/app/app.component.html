@@ -4,23 +4,20 @@
 <div>
  Search: <b>{{name}}</b>
  <input [(ngModel)]="name">
- <!--<table id="dynamic" width="650" border="1" cellspacing="0" cellpadding="5">
+ <table width="650" border="1" cellspacing="0" cellpadding="5">
   <tr>
-   <th scope="col">Язык</th>
-   <th scope="col">Тэг</th>
-   <th scope="col">Ссылка</th>
+   <th scope="col">title</th>
+   <th scope="col">url</th>
+   <th scope="col">channel</th>
+   <th scope="col">views</th>
   </tr>
-  <tr>
-   <td>Java Script</td>
-   <td>Valor JavaS</td>
-   <td>(Ссылка)</td>
+  <tr *ngFor="let movie of movies">
+   <td>{{movie.title}}</td>
+   <td>{{movie.url}}</td>
+   <td>{{movie.channel}}</td>
+   <td>{{movie.views}}</td>
   </tr>
-  <tr>
-   <td>HTML</td>
-   <td>Valor HTML</td>
-   <td>(Ссылка)</td>
-  </tr>
- </table>-->
+ </table>
  <div *ngFor="let result of results">
   {{result.title}}
  </div>
