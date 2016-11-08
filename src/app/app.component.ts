@@ -29,4 +29,14 @@ export class AppComponent {
     this.results[0]={url:'(link)',title:'Java Script'};
     this.results[1]={url:'(link)',title:'C++'};
   }
+
+  clicked(event) {
+     this.movies.push({
+       title:'JavaScript',
+       url:'(link)',
+       channel:'aaa',
+       views:20000
+     });
+    console.log(event);
+  }
 }
